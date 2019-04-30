@@ -3,6 +3,8 @@
 
 //ctrl+shift+c：可以快速注释掉选中的多行代码
 //ctrl+shift+x：可以快速对已经注释的多行代码取消注释
+//https://www.cnblogs.com/lulipro/p/7460206.html
+
 
 struct date {
     int month;
@@ -31,7 +33,12 @@ int main()
     printf("change0_struct_test_002,console.log(month)=>%d\n",(*p).month);
     printf("change1_struct_test_002,console.log(month)=>%d\n",p->month);
 
-//    基本的类型、基本的数组和函数、结构体、枚举不同
+/**
+特殊的情况，他们并不一定需要使用&取地址：
+  数组名的值就是这个数组的第一个元素的地址。
+  函数名的值就是这个函数的地址。
+  字符串字面值常量作为右值时，就是这个字符串对应的字符数组的名称,也就是这个字符串在内存中的地址。
+**/
     int *pstr=(int*)&today2;
     //*pstr； //访问了ss 的成员a。
     //*(pstr+1); //访问了ss 的成员b。
