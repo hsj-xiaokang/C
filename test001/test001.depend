@@ -1,0 +1,9 @@
+# depslib dependency file v1.0
+1556269424 source:f:\the_c\test001\main.c
+	<stdio.h>
+	"head.h"
+
+1556269669 f:\the_c\test001\head.h
+
+1556270117 source:f:\the_c\test001\head.c
+
