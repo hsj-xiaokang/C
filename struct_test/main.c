@@ -21,16 +21,20 @@ struct date2 {
 int main()
 {
     struct date today = {11,11,1111};
+    //out-print=11
     printf("struct_test_001,console.log(month)=>%d\n",today.month);
 
     today2.month = 8888;
+    //out-print=8888
     printf("struct_test_002,console.log(month)=>%d\n",today2.month);
 
 
     struct date *p = &today2;
     (*p).month = 9999;
     p->month = 9999;
+    //out-print=9999
     printf("change0_struct_test_002,console.log(month)=>%d\n",(*p).month);
+    //out-print=9999
     printf("change1_struct_test_002,console.log(month)=>%d\n",p->month);
 
 /**
@@ -43,6 +47,7 @@ int main()
     //*pstr； //访问了ss 的成员a。
     //*(pstr+1); //访问了ss 的成员b。
     //*(pstr+2) //访问了ss 的成员c。
+    //out-print=222
     printf("change_method2_struct_test_002,console.log(month)=>%d\n",*(pstr+1));
 
 
@@ -60,6 +65,7 @@ int main()
     printf("array=>%d\n",*(pa+2));
     printf("array=>%d\n",*array);
     printf("array=>%d\n",*paaddr);
+    printf("array=>%d\n",array[0]);
 
     int a = 100;
     printf("array=>%d\n",a);
