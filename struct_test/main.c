@@ -37,6 +37,12 @@ int main()
     //out-print=9999
     printf("change1_struct_test_002,console.log(month)=>%d\n",p->month);
 
+    //指针的指针
+    struct date **dd = &p;
+    printf("指针的指针,地址%d\n",&dd);
+    (**dd).month = 2019;
+    printf("change1_struct_test_2019,console.log(month)=>%d\n",(**dd).month);
+
 /**
 特殊的情况，他们并不一定需要使用&取地址：
   数组名的值就是这个数组的第一个元素的地址。
