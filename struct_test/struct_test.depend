@@ -3,14 +3,14 @@
 	<stdio.h>
 	<stdlib.h>
 
-1562654876 source:f:\the_c\c\struct_test\main.c
+1562655491 source:f:\the_c\c\struct_test\main.c
 	<stdio.h>
 	<stdlib.h>
 	"pointers.h"
 
-1562653705 f:\the_c\c\struct_test\pointers.h
+1562659080 f:\the_c\c\struct_test\pointers.h
 
-1562654790 source:f:\the_c\c\struct_test\pointers.c
+1562656316 source:f:\the_c\c\struct_test\pointers.c
 	<stdio.h>
 	<stdlib.h>
 	"pointers.h"

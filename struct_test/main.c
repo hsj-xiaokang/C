@@ -6,6 +6,8 @@
 //https://www.cnblogs.com/lulipro/p/7460206.html
 /**
  指针知识基础，堆和栈
+ codeblock无法编译，提示函数没有定义，但是函数已经 在头文件中定义了
+ 解决办法：Project properties->build targets->Debug->build target files，全部勾选
  @author:heshengjin
  @date:2019_07_09
  @email:2356899074@qq.com
