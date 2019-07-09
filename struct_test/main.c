@@ -4,7 +4,12 @@
 //ctrl+shift+c：可以快速注释掉选中的多行代码
 //ctrl+shift+x：可以快速对已经注释的多行代码取消注释
 //https://www.cnblogs.com/lulipro/p/7460206.html
-
+/**
+ 指正知识基础，堆和栈
+ @author:heshengjin
+ @date:2019_07_09
+ @email:2356899074@qq.com
+**/
 
 struct date {
     int month;
