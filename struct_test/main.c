@@ -18,8 +18,13 @@ struct date2 {
     int year;
 } today2 = {22,222,2222};
 
+void getHeap(int **p){
+     *p = malloc(sizeof(int)* 10);
+}
+
 int main()
 {
+    //============================分配和释放栈上？？==========================
     struct date today = {11,11,1111};
     //out-print=11
     printf("struct_test_001,console.log(month)=>%d\n",today.month);
@@ -41,7 +46,10 @@ int main()
     struct date **dd = &p;
     printf("指针的指针,地址%d\n",&dd);
     (**dd).month = 2019;
+    //out-print=2019
     printf("change1_struct_test_2019,console.log(month)=>%d\n",(**dd).month);
+    //out-print=2019
+    printf("struct_test_002,console.log(month)=>%d\n",today2.month);
 
 /**
 特殊的情况，他们并不一定需要使用&取地址：
@@ -66,17 +74,39 @@ int main()
    // *pa; //访问了第0 号单元
    // *(pa+1); //访问了第1 号单元
    // *(pa+2); //访问了第2 号单元
+    //out-print=2686708-数组收割值得地址
     printf("array=>%d\n",array);
+    //out-print=2686708-数组收割值得地址
     printf("array=>%d\n",&array);
+    //out-print=37
     printf("array=>%d\n",*(pa+2));
+    //out-print=35
     printf("array=>%d\n",*array);
+    //out-print=35
     printf("array=>%d\n",*paaddr);
+    //out-print=35
     printf("array=>%d\n",array[0]);
 
     int a = 100;
+     //out-print=100
     printf("array=>%d\n",a);
+     //out-print=2686704-地址
     printf("array=>%d\n",&a);
 
 
+    //============================分配和释放堆上==========================
+     int *d = NULL;
+     //out-print=0028feec-随机地址
+     printf("d = %p\n", &d);
+     getHeap(&d);
+     //out-print=4529712-堆地址第一个
+     printf("d = %d\n", d);
+     d[0] = 1;
+     d[1] = 2;
+     //out-print=1，2
+     printf("d[0] =%d ,d[1] =%d ", d[0], d[1]);
+     free(d);
+     //out-print=0028feec-随机地址
+     printf("d = %p\n", &d);
     return 0;
 }
