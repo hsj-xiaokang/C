@@ -1,0 +1,6 @@
+#ifndef JUSTTESTH1_H_INCLUDED
+#define JUSTTESTH1_H_INCLUDED
+
+void justTest1();
+
+#endif // JUSTTESTH1_H_INCLUDED
